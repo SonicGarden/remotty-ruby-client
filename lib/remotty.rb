@@ -3,6 +3,7 @@ require 'remotty/configuration'
 require 'remotty/user'
 require 'remotty/participation'
 require 'remotty/comment'
+require 'remotty/group'
 
 module Remotty
   class << self
