@@ -12,8 +12,9 @@ module Remotty
       end
     end
 
-    def post_entry(content)
-      Remotty.access_token(token).post("/api/v1/groups/#{self.id}/entries.json", body: {entry: {content: content}})
+    def post_entry(content, parent_id = nil)
+      result = Remotty.access_token(token).post("/api/v1/groups/#{self.id}/entries.json", body: {entry: {content: content, parent_id: parent_id}})
+      JSON.parse(result.body)
     end
 
     def self.list(token)
