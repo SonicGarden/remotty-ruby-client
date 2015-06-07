@@ -1,3 +1,6 @@
+require 'active_support'
+require 'active_support/core_ext'
+require 'json'
 require 'remotty/version'
 require 'remotty/configuration'
 require 'remotty/user'
