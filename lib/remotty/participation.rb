@@ -10,8 +10,8 @@ module Remotty
       end
     end
 
-    def post_comment(content)
-      response = Remotty.access_token(token).post("/api/v1/rooms/participations/#{self.id}/comments.json", body: { comment: { content: content } }).parsed
+    def post_comment(content, show_log = false)
+      response = Remotty.access_token(token).post("/api/v1/rooms/participations/#{self.id}/comments.json", body: { comment: { content: content, show_log: show_log } }).parsed
       Remotty::Comment.new(token, response)
     end
   end
