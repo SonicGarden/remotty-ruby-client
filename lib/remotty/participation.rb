@@ -8,6 +8,7 @@ module Remotty
         self.id = attributes['id']
         self.name = attributes['name']
         self.icon_url = attributes['icon_url']
+        self.email = attributes['email']
       end
     end
 
