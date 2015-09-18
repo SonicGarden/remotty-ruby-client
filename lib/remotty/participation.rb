@@ -1,6 +1,6 @@
 module Remotty
   class Participation
-    attr_accessor :id, :name, :icon_url, :token
+    attr_accessor :id, :name, :icon_url, :token, :email
 
     def initialize(token, attributes = nil)
       self.token = token
