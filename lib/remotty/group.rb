@@ -13,7 +13,7 @@ module Remotty
     end
 
     def post_entry(content, parent_id = nil, with_archive = false)
-      result = Remotty.access_token(token).post("/api/v1/groups/#{self.id}/entries.json", body: {entry: {content: content, parent_id: parent_id}, with_archive: with_archive})
+      result = Remotty.access_token(token).post("/api/v1/groups/#{self.id}/entries.json", body: {entry: {content: content, parent_id: parent_id, with_archive: with_archive}})
       JSON.parse(result.body)
     end
 
