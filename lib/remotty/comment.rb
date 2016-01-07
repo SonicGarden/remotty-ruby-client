@@ -6,6 +6,7 @@ module Remotty
     def initialize(token, attributes = nil)
       self.token = token
       if attributes.present?
+        attributes = attributes.stringify_keys
         self.id = attributes['id']
         self.content = attributes['content']
         self.all = attributes['all']
